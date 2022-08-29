@@ -1,20 +1,51 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
-  "private": true,
+  "name": "nextjs-typescript",
+  "author": "Gainor Bostwick",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next",
+    "build": "rm -rf .next && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ./ --ext .js,.ts,.tsx",
+    "format": "yarn lint --fix",
+    "now-build": "next build"
+  },
+  "engines": {
+    "node": "14.x"
   },
   "dependencies": {
-    "next": "12.2.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@types/three": "^0.143.2",
+    "dotenv": "^8.2.0",
+    "next": "^10.1.3",
+    "polished": "^4.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.2.3",
+    "three": "^0.143.0"
   },
   "devDependencies": {
-    "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5"
-  }
+    "@babel/core": "7.13.16",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.12",
+    "@types/node": "14.14.41",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "17.0.3",
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "4.22.0",
+    "@typescript-eslint/parser": "4.22.0",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "7.24.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "8.2.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-react": "7.23.2",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "prettier": "2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "license": "ISC"
 }
